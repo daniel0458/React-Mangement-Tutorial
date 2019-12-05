@@ -1,5 +1,25 @@
 import React from 'react';
+import TableRow from '@material-ui/core/TableRow';
+import Tablecell from '@material-ui/core/TableCell';
+
+
 class Customer extends React.Component {
+    render() {
+        return(
+            <TableRow>
+            <Tablecell>{this.props.id}</Tablecell>
+            <Tablecell><img src={this.props.image} alt="profile"/></Tablecell>
+            <Tablecell>{this.props.name}</Tablecell>
+            <Tablecell>{this.props.birthday}</Tablecell>
+            <Tablecell>{this.props.gender}</Tablecell>
+            <Tablecell>{this.props.job}</Tablecell>
+            </TableRow>
+        )    
+    }
+}
+
+//componet 분할
+/*class Customer extends React.Component {
     render() {
         return(
             <div>
@@ -10,7 +30,7 @@ class Customer extends React.Component {
     }
 }
 
-class CustomerProfile extends React.Component {
+ class CustomerProfile extends React.Component {
     render() {
         return (
             <div>
@@ -31,5 +51,5 @@ class CustomerInfo extends React.Component {
             </div>
         )
     }
-}
+} */
 export default Customer;
